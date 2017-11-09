@@ -1,0 +1,37 @@
+{
+  "name": "admin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "4.0.0-beta.2",
+    "chart.js": "2.7.0",
+    "font-awesome": "^4.7.0",
+    "history": "4.7.2",
+    "react": "^16.0.0",
+    "react-chartjs-2": "2.6.4",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "react-transition-group": "^2.2.1",
+    "reactstrap": "^5.0.0-alpha.3",
+    "simple-line-icons": "^2.4.1"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.2"
+  },
+  "scripts": {
+    "start": "npm-run-all -p build-dev-css1 build-dev-css2 build-dev-react",
+    "build": "npm-run-all    build-prod-css1 build-prod-css2 build-prod-react",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+
+    "build-prod-css1": "node-sass-chokidar src/styles/scss/dropdown-menu-right.scss -o src/styles/css/",
+    "build-prod-css2": "node-sass-chokidar src/styles/scss/style.scss -o src/styles/css/",
+    "build-prod-react": "react-scripts build",
+
+    "build-dev-css1": "node-sass-chokidar --watch src/styles/scss/dropdown-menu-right.scss -o src/styles/css/",
+    "build-dev-css2": "node-sass-chokidar --watch src/styles/scss/style.scss -o src/styles/css/",
+    "build-dev-react": "react-scripts start"
+  }
+}
